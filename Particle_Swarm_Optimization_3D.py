@@ -84,12 +84,12 @@ def shape(x):
     #return scaling_factor * sum([xi ** 2 for xi in x])
     
     #                               --- Ackley Function --- 
-    #scaling_factor = 40  # Adjust scaling factor to fit within 0 to 1000
-    #n = len(x)
-    #return scaling_factor * (-20 * np.exp(-0.2 * np.sqrt((1/n) * sum([xi ** 2 for xi in x]))) - np.exp((1/n) * sum([np.cos(2 * np.pi * xi) for xi in x])) + 20 + np.exp(1))
+    scaling_factor = 40  # Adjust scaling factor to fit within 0 to 1000
+    n = len(x)
+    return scaling_factor * (-20 * np.exp(-0.2 * np.sqrt((1/n) * sum([xi ** 2 for xi in x]))) - np.exp((1/n) * sum([np.cos(2 * np.pi * xi) for xi in x])) + 20 + np.exp(1))
     
     #                               --- Zakharov Function ---  
-    return sum([x[i]**2 for i in range(len(x))]) + (0.5 * sum([i * x[i] for i in range(len(x))]))**2 + (0.5 * sum([i * x[i] for i in range(len(x))]))**4
+    #return sum([x[i]**2 for i in range(len(x))]) + (0.5 * sum([i * x[i] for i in range(len(x))]))**2 + (0.5 * sum([i * x[i] for i in range(len(x))]))**4
 
 
 # Define the initial position and bounds for each dimension
@@ -97,7 +97,7 @@ x0 = [0.8, 1.2]
 bounds = [(-10, 10), (-10, 10)]
 
 # Run the particle swarm optimization algorithm with 20 particles for 100 iterations
-best_position, best_fitness = particle_swarm_optimization(shape, x0, bounds, num_particles=20, maxiter=100, optimize_mode="min")
+best_position, best_fitness = particle_swarm_optimization(shape, x0, bounds, num_particles=20, maxiter=100, optimize_mode="max")
 
 # Generate data for the shape function
 x = np.linspace(-10, 10, 100)
