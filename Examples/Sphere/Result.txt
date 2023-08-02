@@ -1,0 +1,2 @@
+Best position: [10, 10]
+Best fitness: 1000.0
