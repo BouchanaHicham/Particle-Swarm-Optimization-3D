@@ -95,3 +95,15 @@ best_position, best_fitness = particle_swarm_optimization(shape, x0, bounds, num
 ![Zakharov Function](https://github.com/BouchanaHicham/Particle-Swarm-Optimization-3D/blob/main/Examples/Zakharov%20Function/Zakharov%20Function%20(min).png)<br>
 Best position: [-1.6213931380268527e-11, -4.87704978117861e-12]<br>
 Best fitness: -2.9262358901417433e-22
+
+## License
+
+This project is licensed under the MIT License. You can find the full text of the license in the [LICENSE](LICENSE) file.
+
+## Contributions
+
+Contributions to this project are more than welcome. If you have any suggestions, bug fixes, or new features to add, please feel free to fork the repository and submit a pull request. We value your feedback and contributions!
+
+## Author
+
+**Bouchana Hicham**
